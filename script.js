@@ -8,7 +8,7 @@ changeColor();
 const btn = document.querySelector(".change-grid");
 btn.addEventListener("click", (event) => {
 
-    input = prompt("Enter number: ", "");
+    input = prompt("Enter num(0-100): ", "");
     if (input > 0 && input <= 100) {
         clearGrid();
         setGrid(input);
@@ -23,12 +23,12 @@ function setGrid(size) {
     for (let i = 0; i < size; i++) {
         const parentDiv = document.createElement("div");
         parentDiv.classList.add("sub-container");
-        parentDiv.setAttribute("style", "flex: auto; display: flex; height: 60px; border: 1px solid black;");
+        parentDiv.setAttribute("style", "flex: auto; display: flex; height: 60px;");
     
         container.appendChild(parentDiv);
         for (let j = 0; j < size; j++) {
             const childDiv = document.createElement("div");
-            childDiv.setAttribute("style", "flex: auto; width: 60px; border: 1px solid black;");
+            childDiv.setAttribute("style", "flex: auto; width: 60px;");
             childDiv.classList.add("red");
     
             parentDiv.appendChild(childDiv);
